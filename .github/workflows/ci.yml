@@ -46,7 +46,12 @@ jobs:
           - os: windows-latest
             target: aarch64-pc-windows-msvc
             triplet: arm64-windows-static-md
-
+        rust:
+          - stable
+          - beta
+          - nightly
+          - 1.70.0 # MSRV
+          
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -54,7 +59,7 @@ jobs:
       - name: Install Rust
         uses: dtolnay/rust-toolchain@master
         with:
-          toolchain: stable
+          toolchain: ${{ matrix.rust }}
           targets: ${{ matrix.target }}
 
       - name: Setup cache
