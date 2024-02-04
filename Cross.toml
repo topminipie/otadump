@@ -12,7 +12,7 @@ pre-build = [
     cd /tmp/rust-libs && \
     git clone https://git.tukaani.org/xz.git && \
     cd xz && \
-    git checkout v5.4.3 && \
+    git checkout v5.4.4 && \
     CC=x86_64-linux-musl ./autogen.sh --no-po4a --no-doxygen && \
     CC=x86_64-linux-musl-gcc ./configure --disable-shared --host x86_64-unknown-linux-musl --disable-doc --disable-scripts && \
     cd src/liblzma/ && \
@@ -42,7 +42,7 @@ pre-build = [
     cd /tmp/rust-libs && \
     git clone https://git.tukaani.org/xz.git && \
     cd xz && \
-    git checkout v5.4.3 && \
+    git checkout v5.4.4 && \
     CC=aarch64-linux-musl ./autogen.sh --no-po4a --no-doxygen && \
     CC=aarch64-linux-musl-gcc ./configure --disable-shared --host aarch64-unknown-linux-musl --disable-doc --disable-scripts && \
     cd src/liblzma/ && \
@@ -71,7 +71,7 @@ pre-build = [
     cd /tmp/rust-libs && \
     git clone https://git.tukaani.org/xz.git && \
     cd xz && \
-    git checkout v5.4.3 && \
+    git checkout v5.4.4 && \
     CC=arm-linux-musleabihf ./autogen.sh --no-po4a --no-doxygen && \
     CC=arm-linux-musleabihf-gcc ./configure --disable-shared --host arm-unknown-linux-musleabihf --disable-doc --disable-scripts && \
     cd src/liblzma/ && \
@@ -100,7 +100,7 @@ pre-build = [
     cd /tmp/rust-libs && \
     git clone https://git.tukaani.org/xz.git && \
     cd xz && \
-    git checkout v5.4.3 && \
+    git checkout v5.4.4 && \
     CC=arm-linux-musleabihf ./autogen.sh --no-po4a --no-doxygen && \
     CC=arm-linux-musleabihf-gcc ./configure --disable-shared --host armv7-unknown-linux-musleabihf --disable-doc --disable-scripts && \
     cd src/liblzma/ && \
