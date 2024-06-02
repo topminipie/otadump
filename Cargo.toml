@@ -9,37 +9,35 @@ edition = "2021"
 keywords = ["android", "cli", "terminal"]
 license = "MIT"
 name = "otadump"
-repository = "https://github.com/crazystylus/otadump"
+repository = "https://github.com/topminipie/otadump"
 readme = "README.md"
-rust-version = "1.68.0"
-version = "0.1.2"
+rust-version = "1.78.0"
+version = "0.1.5"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-anyhow = "1.0.69"
+anyhow = "1.0.86"
 bzip2 = { version = "0.4.4", features = ["static"] }
-chrono = "0.4.24"
-clap = { version = "4.2.1", features = ["derive"] }
-color-print = "0.3.4"
-comfy-table = "6.1.4"
-console = { version = "0.15.5", features = ["windows-console-colors"] }
+chrono = "0.4.38"
+clap = { version = "4.5.4", features = ["derive"] }
+color-print = "0.3.6"
+console = { version = "0.15.8", features = ["windows-console-colors"] }
 hex = "0.4.3"
-indicatif = "0.17.3"
-memmap2 = "0.6.2"
+indicatif = "0.17.8"
+memmap2 = "0.9.4"
 nom = "7.1.3"
 nom-derive = "0.10.1"
-prost = "0.11.8"
-rayon = "1.7.0"
+prost = "0.12.6"
+rayon = "1.10.0"
 rust-lzma = { version = "0.6.0", features = ["static"] }
-sha2 = "0.10.6"
-sync-unsafe-cell = "0.1.0"
+sha2 = "0.10.8"
+sync-unsafe-cell = "0.1.1"
 
 [build-dependencies]
-prost-build = "0.11"
+prost-build = "0.12.6"
 
 [profile.release]
 codegen-units = 1
-debug = 0
 lto = true
 strip = true

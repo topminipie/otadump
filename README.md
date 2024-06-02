@@ -1,13 +1,5 @@
-<!-- markdownlint-configure-file {
-  "MD033": false,
-  "MD041": false
-} -->
-
-<div align="center">
 
 # otadump
-
-[![crates.io][crates.io-badge]][crates.io]
 
 **`otadump` helps you extract partitions from Android OTA files.** <br />
 Partitions can be individually flashed to your device using `fastboot`.
@@ -21,13 +13,14 @@ verification - no fear of a bad OTA file bricking your device.
 
 ## Features
 
-|                              | [crazystylus/otadump] | [ssut/payload-dumper-go] | [vm03/payload_dumper]                     |
-| ---------------------------- | --------------------- | ------------------------ | ----------------------------------------- |
-| Input file verification      | ✔                     | ✔                        |                                           |
-| Output file verification     | ✔                     |                          |                                           |
-| Extract selective partitions | ✔                     | ✔                        | ✔                                         |
-| Parallelized extraction      | ✔                     | ✔                        |                                           |
-| Incremental OTA support      |                       |                          | [Partial][payload_dumper-incremental-ota] |
+|                              | [topminipie/otadump]   | [ssut/payload-dumper-go] | [vm03/payload_dumper]                     |
+| ---------------------------- | ---------------------- | ------------------------ | ----------------------------------------- |
+| Input file verification      | ✅                     | ✅                        | ❌                                        |
+| Output file verification     | ✅                     | ❌                        | ❌                                        |
+| Extract selective partitions | ✅                     | ✅                        | ✅                                        |
+| Parallelized extraction      | ✅                     | ✅                        | ❌                                        |
+| Runs directly on .zip files  | ❌                     | ✅                        | ❌                                        |
+| Incremental OTA support      | ❌                     | ❌                        | [Partial][payload_dumper-incremental-ota] |
 
 ## Benchmarks
 
@@ -47,27 +40,7 @@ System specifications:
 
 ## Installation
 
-### macOS / Linux
-
-Install a pre-built binary:
-
-```sh
-curl -sS https://raw.githubusercontent.com/crazystylus/otadump/mainline/install.sh | bash
-```
-
-Otherwise, using Cargo:
-
-```sh
-# Needs LZMA, Protobuf and pkg-config libraries installed.
-# - On macOS: brew install protobuf xz pkg-config
-# - On Debian / Ubuntu: apt install liblzma-dev protobuf-compiler pkg-config
-cargo install --locked otadump
-```
-
-### Windows
-
-Download the pre-built binary from the [Releases] page. Extract it and run the
-`otadump.exe` file.
+Download a pre-built binary: [Releases](https://github.com/topminipie/otadump/releases/latest)
 
 ## Usage
 
@@ -79,17 +52,13 @@ otadump payload.bin
 
 ## Contributors
 
-- [Kartik Sharma][crazystylus]
-- [Ajeet D'Souza][ajeetdsouza]
+- [Kartik Sharma](https://github.com/crazystylus)
+- [Ajeet D'Souza](https://github.com/ajeetdsouza)
+- [topminipie](https://github.com/topminipie)
 
-[ajeetdsouza]: https://github.com/ajeetdsouza
 [benchmarks]: contrib/benchmarks.svg
-[crates.io-badge]: https://img.shields.io/crates/v/otadump?logo=rust&logoColor=white&style=flat-square
-[crates.io]: https://crates.io/crates/otadump
-[crazystylus]: https://github.com/crazystylus
-[crazystylus/otadump]: https://github.com/crazystylus/otadump
 [demo]: contrib/demo.gif
-[payload_dumper-incremental-ota]: https://github.com/vm03/payload_dumper/issues/53
-[releases]: https://github.com/crazystylus/otadump/releases
+[topminipie/otadump]: https://github.com/crazystylus/otadump
 [ssut/payload-dumper-go]: https://github.com/ssut/payload-dumper-go
-[vm03/payload_dumper]: https://github.com/crazystylus/otadump
+[vm03/payload_dumper]: https://github.com/vm03/payload_dumper
+[payload_dumper-incremental-ota]: https://github.com/vm03/payload_dumper/issues/53

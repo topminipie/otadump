@@ -29,7 +29,7 @@ const HELP_TEMPLATE: &str = color_print::cstr!(
     "\
 {before-help}<bold><underline>{name} {version}</underline></bold>
 {author}
-https://github.com/crazystylus/otadump
+https://github.com/topminipie/otadump
 
 {about}
 
