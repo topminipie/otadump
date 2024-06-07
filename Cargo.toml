@@ -20,7 +20,7 @@ version = "0.1.5"
 anyhow = "1.0.86"
 bzip2 = { version = "0.4.4", features = ["static"] }
 chrono = "0.4.38"
-clap = { version = "4.5.4", features = ["derive"] }
+clap = { version = "4.5.6", features = ["derive"] }
 color-print = "0.3.6"
 console = { version = "0.15.8", features = ["windows-console-colors"] }
 hex = "0.4.3"
