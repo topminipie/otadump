@@ -74,7 +74,7 @@ jobs:
         uses: lukka/run-vcpkg@v11
         id: runvcpkg
         with:                # https://github.com/microsoft/vcpkg/releases/latest
-          vcpkgGitCommitId: '01f602195983451bc83e72f4214af2cbc495aa94' # 2024.05.24
+          vcpkgGitCommitId: '1de2026f28ead93ff1773e6e680387643e914ea1' # 2024.07.12
 
       - name: Install liblzma on Windows
         if: runner.os == 'Windows'
@@ -102,7 +102,7 @@ jobs:
         if: runner.os == 'Linux'
         continue-on-error: true
         run: |
-          sudo apt install -y protobuf-compiler
+          sudo apt-get install -y protobuf-compiler
           cargo clippy -- -D warnings
 
       - name: Run clippy (Windows, MacOS)
