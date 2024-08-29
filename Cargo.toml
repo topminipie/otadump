@@ -35,7 +35,7 @@ sha2 = "0.10.8"
 sync-unsafe-cell = "0.1.1"
 
 [build-dependencies]
-prost-build = "0.12.6"
+prost-build = "0.13.1"
 
 [profile.release]
 codegen-units = 1
