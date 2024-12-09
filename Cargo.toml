@@ -28,7 +28,7 @@ indicatif = "0.17"
 memmap2 = "0.9"
 nom = "7.1"
 nom-derive = "0.10"
-prost = "0.12"
+prost = "0.13"
 rayon = "1.10"
 rust-lzma = { version = "0.6", features = ["static"] }
 sha2 = "0.10"
