@@ -56,11 +56,11 @@ jobs:
         with:
           key: ${{ matrix.target }}
 
-      - name: MacOS: Install protobuf
+      - name: Install protobuf (MacOS)
         if: runner.os == 'macOS'
         run: brew install protobuf
 
-      - name: Windows: Install protobuf
+      - name: Install protobuf (Windows)
         if: runner.os == 'Windows'
         uses: arduino/setup-protoc@c65c819552d16ad3c9b72d9dfd5ba5237b9c906b # v3.0.0
         with:
