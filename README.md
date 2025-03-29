@@ -7,8 +7,6 @@
 
 # otadump
 
-[![crates.io][crates.io-badge]][crates.io]
-
 **`otadump` helps you extract partitions from Android OTA files.** <br />
 Partitions can be individually flashed to your device using `fastboot`.
 
@@ -21,7 +19,7 @@ verification - no fear of a bad OTA file bricking your device.
 
 ## Features
 
-|                              | [crazystylus/otadump] | [ssut/payload-dumper-go] | [vm03/payload_dumper]                     |
+|                              | [topminipie/otadump] | [ssut/payload-dumper-go] | [vm03/payload_dumper]                     |
 | ---------------------------- | --------------------- | ------------------------ | ----------------------------------------- |
 | Input file verification      | ✔                     | ✔                        |                                           |
 | Output file verification     | ✔                     |                          |                                           |
@@ -48,27 +46,7 @@ System specifications:
 
 ## Installation
 
-### macOS / Linux
-
-Install a pre-built binary:
-
-```sh
-curl -sS https://raw.githubusercontent.com/crazystylus/otadump/mainline/install.sh | bash
-```
-
-Otherwise, using Cargo:
-
-```sh
-# Needs LZMA, Protobuf and pkg-config libraries installed.
-# - On macOS: brew install protobuf xz pkg-config
-# - On Debian / Ubuntu: apt install liblzma-dev protobuf-compiler pkg-config
-cargo install --locked otadump
-```
-
-### Windows
-
-Download the pre-built binary from the [Releases] page. Extract it and run the
-`otadump.exe` file.
+Download a pre-built binary: [Releases](https://github.com/topminipie/otadump/releases)
 
 ## Usage
 
@@ -89,12 +67,9 @@ otadump payload.bin
 
 [ajeetdsouza]: https://github.com/ajeetdsouza
 [benchmarks]: contrib/benchmarks.svg
-[crates.io-badge]: https://img.shields.io/crates/v/otadump?logo=rust&logoColor=white&style=flat-square
-[crates.io]: https://crates.io/crates/otadump
 [crazystylus]: https://github.com/crazystylus
-[crazystylus/otadump]: https://github.com/crazystylus/otadump
+[topminipie/otadump]: https://github.com/topminipie/otadump
 [demo]: contrib/demo.gif
 [payload_dumper-incremental-ota]: https://github.com/vm03/payload_dumper/issues/53
-[releases]: https://github.com/crazystylus/otadump/releases
 [ssut/payload-dumper-go]: https://github.com/ssut/payload-dumper-go
 [vm03/payload_dumper]: https://github.com/vm03/payload_dumper
