@@ -21,14 +21,12 @@ jobs:
           # Linux Targets
           - os: ubuntu-latest
             target: x86_64-unknown-linux-gnu
-          - os: ubuntu-latest
-            target: aarch64-unknown-linux-gnu
-          - os: ubuntu-latest
-            target: armv7-unknown-linux-gnueabihf
-          - os: ubuntu-latest
-            target: arm-unknown-linux-gnueabihf
           - os: ubuntu-24.04-arm
             target: aarch64-unknown-linux-gnu
+          - os: ubuntu-24.04-arm
+            target: armv7-unknown-linux-gnueabihf
+          - os: ubuntu-24.04-arm
+            target: arm-unknown-linux-gnueabihf
 
           # MacOS targets
           - os: macos-latest
@@ -85,28 +83,12 @@ jobs:
 
       - name: Run clippy
         continue-on-error: true
-        run: cargo clippy -- -D warnings
-
-      - name: Package for Linux, MacOS
-        if: runner.os != 'Windows'
-        run: |
-          tar -cv
-          LICENSE README.md
-          -C target/${{ matrix.target }}/release/ otadump
-          | gzip --best
-          > 'otadump-${{ steps.get_version.outputs.value }}-${{ matrix.target }}.tar.gz'
-
-      - name: Package for Windows
-        if: runner.os == 'Windows'
-        run: |
-          7z a 'otadump-${{ steps.get_version.outputs.value }}-${{ matrix.target }}.zip'
-          LICENSE README.md
-          ./target/${{ matrix.target }}/release/otadump.exe
+        run: cargo clippy -- -D warnings --color=always
 
       - name: Upload
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: ${{ matrix.target }}
           path: |
-            *.tar.gz
-            *.zip
+            ./target/${{ matrix.target }}/release/otadump
+            ./target/${{ matrix.target }}/release/otadump.exe
