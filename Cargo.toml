@@ -25,7 +25,7 @@ clap = { version = "4.2.1", features = ["derive"] }
 color-print = "0.3.4"
 hex = "0.4.3"
 indicatif = "0.17.3"
-liblzma = { version = "0.3.4", features = ["fat-lto", "static"] }
+liblzma = { version = "0.4.0", features = ["fat-lto", "static"] }
 memmap2 = "0.9.5"
 nom = "7.1.1"
 nom-derive = "0.10.1"
