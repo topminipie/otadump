@@ -2,12 +2,12 @@
 image = "ghcr.io/cross-rs/arm-unknown-linux-gnueabihf:main"
 pre-build = [
     "apt-get update",
-    "apt install -y protobuf-compiler",
+    "apt install -y protobuf-compiler clang lld",
 ]
 
 [target.armv7-unknown-linux-gnueabihf]
 image = "ghcr.io/cross-rs/armv7-unknown-linux-gnueabihf:main"
 pre-build = [
     "apt-get update",
-    "apt install -y protobuf-compiler",
+    "apt install -y protobuf-compiler clang lld",
 ]
