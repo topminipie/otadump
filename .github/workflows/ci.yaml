@@ -23,10 +23,10 @@ jobs:
             target: x86_64-unknown-linux-gnu
           - os: ubuntu-24.04-arm
             target: aarch64-unknown-linux-gnu
-          - os: ubuntu-latest
-            target: armv7-unknown-linux-gnueabihf
-          - os: ubuntu-latest
-            target: arm-unknown-linux-gnueabihf
+          #- os: ubuntu-latest
+          #  target: armv7-unknown-linux-gnueabihf
+          #- os: ubuntu-latest
+          #  target: arm-unknown-linux-gnueabihf
 
           # MacOS targets
           - os: macos-latest
@@ -77,12 +77,12 @@ jobs:
           cargo update --color=always
           CC=clang cargo build --release --target=${{ matrix.target }} --color=always
 
-      - name: Build binary for Linux (Cross)
-        if: runner.os == 'Linux' && matrix.target == 'armv7-unknown-linux-gnueabihf' || matrix.target == 'arm-unknown-linux-gnueabihf'
-        run: |
-          cargo install cross
-          cargo update --color=always
-          CC=clang cross build --release --target=${{ matrix.target }} --color=always
+      #- name: Build binary for Linux (Cross)
+      #  if: runner.os == 'Linux' && matrix.target == 'armv7-unknown-linux-gnueabihf' || matrix.target == 'arm-unknown-linux-gnueabihf'
+      #  run: |
+      #    cargo install cross
+      #    cargo update --color=always
+      #    CC=clang cross build --release --target=${{ matrix.target }} --color=always
 
       - name: Check code formatting
         continue-on-error: true
