@@ -29,7 +29,7 @@ liblzma = { version = "0.3.4", features = ["fat-lto", "static"] }
 memmap2 = "0.9.5"
 nom = "7.1.1"
 nom-derive = "0.10.1"
-prost = "0.13.4"
+prost = "0.14.0"
 rayon = "1.7.0"
 ring = { version = "0.17.11", features = ["std"] }
 sync-unsafe-cell = "0.1.0"
