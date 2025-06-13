@@ -16,7 +16,7 @@ version = "0.1.3"
 
 
 [build-dependencies]
-prost-build = "0.13.4"
+prost-build = "0.14.0"
 
 [dependencies]
 anyhow = "1.0.69"
