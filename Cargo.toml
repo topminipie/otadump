@@ -20,7 +20,7 @@ prost-build = "0.13.4"
 
 [dependencies]
 anyhow = "1.0.69"
-bzip2 = { version = "0.5.0", features = ["static"] }
+bzip2 = { version = "0.6.0", features = ["static"] }
 clap = { version = "4.2.1", features = ["derive"] }
 color-print = "0.3.4"
 hex = "0.4.3"
