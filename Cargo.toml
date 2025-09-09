@@ -34,7 +34,7 @@ rayon = "1.7.0"
 ring = { version = "0.17.11", features = ["std"] }
 sync-unsafe-cell = "0.1.0"
 tempfile = "3.6.0"
-zip = { version = "2.2.2", features = [
+zip = { version = "2.6.1", features = [
     "deflate-zlib-ng",
     "bzip2",
     "zstd",
